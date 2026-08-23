@@ -8,6 +8,13 @@ pyproject.toml
 # copy, not part of the site; never let it get committed as a subdirectory.
 /ecomeken_site/
 
+# Drafted news articles pending your approval — never auto-published,
+# never committed. Once approved, the file gets moved into data/news/.
+/data/news/_drafts/
+
+# Local dev-only router for `php -S`, not part of the deployed site.
+/_devserver_router.php
+
 # OS / editor cruft
 .DS_Store
 Thumbs.db

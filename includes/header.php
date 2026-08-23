@@ -1,16 +1,21 @@
 <?php
 /**
  * Expects $lang and $t (translations array) to already be set by the caller.
+ * Optional $currentPage ('' for the homepage, 'news' or "news/$slug" for the
+ * news pages) lets the language switcher stay on the equivalent page.
  */
 require_once __DIR__ . '/icons.php';
 
 $logoFile = ecomeken_logo_path();
+$currentPage = $currentPage ?? '';
+$homeUrl = ecomeken_lang_url($lang);
 
 $navItems = [
-    'services' => '#services',
-    'approach' => '#approach',
-    'projects' => '#projects',
-    'contact'  => '#contact',
+    'services' => $homeUrl . '#services',
+    'approach' => $homeUrl . '#approach',
+    'projects' => $homeUrl . '#projects',
+    'news'     => ecomeken_lang_url($lang, 'news'),
+    'contact'  => $homeUrl . '#contact',
 ];
 ?>
 <!doctype html>
@@ -18,8 +23,8 @@ $navItems = [
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?= e(ecomeken_t($t, 'meta.title')) ?></title>
-<meta name="description" content="<?= e(ecomeken_t($t, 'meta.description')) ?>">
+<title><?= e($pageTitle ?? ecomeken_t($t, 'meta.title')) ?></title>
+<meta name="description" content="<?= e($pageDescription ?? ecomeken_t($t, 'meta.description')) ?>">
 <link rel="icon" href="/assets/img/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,13 +54,13 @@ $navItems = [
       <?php endforeach; ?>
       <div class="lang-switch">
         <?php foreach (ECOMEKEN_LANGS as $l): ?>
-          <a href="<?= e(ecomeken_lang_url($l)) ?>" class="<?= $l === $lang ? 'active' : '' ?>"><?= e(ecomeken_t($t, 'lang_switch.' . $l)) ?></a>
+          <a href="<?= e(ecomeken_lang_url($l, $currentPage)) ?>" class="<?= $l === $lang ? 'active' : '' ?>"><?= e(ecomeken_t($t, 'lang_switch.' . $l)) ?></a>
         <?php endforeach; ?>
       </div>
     </nav>
 
     <div class="header-actions">
-      <a href="#contact" class="btn btn-primary btn-sm"><?= e(ecomeken_t($t, 'nav.cta')) ?></a>
+      <a href="<?= e($homeUrl) ?>#contact" class="btn btn-primary btn-sm"><?= e(ecomeken_t($t, 'nav.cta')) ?></a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
         <?= ecomeken_icon('menu', 20) ?>
       </button>

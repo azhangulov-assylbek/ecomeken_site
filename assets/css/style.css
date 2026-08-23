@@ -293,6 +293,50 @@ ul { margin: 0; padding: 0; list-style: none; }
 .form-alert.success { background: rgba(95, 217, 138, 0.12); color: var(--accent-green); border: 1px solid rgba(95, 217, 138, 0.3); }
 .form-alert.error { background: rgba(217, 95, 95, 0.12); color: #e88; border: 1px solid rgba(217, 95, 95, 0.3); }
 
+/* ---------- News ---------- */
+.news-page { padding: 96px 0 96px; }
+.news-page .section-head { text-align: center; max-width: 640px; margin: 0 auto 44px; }
+.news-page .section-head h1 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); }
+.news-page .section-head p { color: var(--text-secondary); }
+
+.back-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 28px;
+}
+.back-link:hover { color: var(--accent-green); }
+
+.news-empty { color: var(--text-secondary); text-align: center; padding: 40px 0; }
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.news-card {
+  display: flex; flex-direction: column; gap: 10px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.news-card:hover { border-color: var(--border-strong); transform: translateY(-3px); }
+.news-date { color: var(--accent-cyan); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.02em; }
+.news-card h2 { font-size: 1.15rem; margin: 0; }
+.news-card p.desc { color: var(--text-secondary); font-size: 0.92rem; flex-grow: 1; margin: 0; }
+.news-readmore { display: inline-flex; align-items: center; gap: 6px; color: var(--accent-green); font-weight: 600; font-size: 0.9rem; }
+
+.news-article { max-width: 720px; margin: 0 auto; }
+.news-article h1 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); margin-top: 8px; }
+.news-article .prose { color: var(--text-secondary); font-size: 1.02rem; line-height: 1.75; margin-top: 24px; }
+.news-article .prose p { margin: 0 0 1.3em; }
+.news-source {
+  margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border);
+  color: var(--text-tertiary); font-size: 0.88rem;
+}
+.news-source a { color: var(--accent-green); }
+.news-source a:hover { color: var(--accent-cyan); }
+
 /* ---------- Footer ---------- */
 .site-footer { border-top: 1px solid var(--border); padding: 40px 0; }
 .footer-grid { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }

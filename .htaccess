@@ -6,8 +6,16 @@ RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
+# /en/news/, /ru/news/, /kk/news/ -> news.php (list) and .../news/<slug>/ -> news.php (article)
+RewriteRule ^(en|ru|kk)/news/([a-z0-9-]+)/?$ news.php?lang=$1&slug=$2 [L,QSA]
+RewriteRule ^(en|ru|kk)/news/?$ news.php?lang=$1 [L,QSA]
+
 # /en/, /ru/, /kk/ -> index.php?lang=xx (index.php itself redirects "/" to one of these)
 RewriteRule ^(en|ru|kk)/?$ index.php?lang=$1 [L,QSA]
+
+# Bare "/news/..." with no language segment -> news.php, which redirects to the detected language.
+RewriteRule ^news/?$ news.php [L,QSA]
+RewriteRule ^news/([a-z0-9-]+)/?$ news.php?slug=$1 [L,QSA]
 
 # Anything else falls back to index.php, which redirects to the detected language.
 RewriteRule ^ index.php [L]

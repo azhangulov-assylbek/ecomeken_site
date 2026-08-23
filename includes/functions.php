@@ -91,3 +91,37 @@ function ecomeken_logo_path(): ?string
     }
     return null;
 }
+
+/**
+ * Load every published news article (data/news/*.php, one array per file),
+ * newest first. Draft files live in data/news/_drafts/ and are never
+ * picked up here — they only become "news" once approved and moved in.
+ */
+function ecomeken_load_news(): array
+{
+    $files = glob(__DIR__ . '/../data/news/*.php') ?: [];
+    $items = [];
+    foreach ($files as $file) {
+        $items[] = require $file;
+    }
+    usort($items, fn($a, $b) => strcmp($b['date'], $a['date']));
+    return $items;
+}
+
+/** Human-readable date, formatted per language without needing the intl extension. */
+function ecomeken_format_date(string $isoDate, string $lang): string
+{
+    [$y, $m, $d] = array_map('intval', explode('-', $isoDate));
+
+    $months = [
+        'ru' => ['', 'января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'],
+        'kk' => ['', 'қаңтар', 'ақпан', 'наурыз', 'сәуір', 'мамыр', 'маусым', 'шілде', 'тамыз', 'қыркүйек', 'қазан', 'қараша', 'желтоқсан'],
+        'en' => ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+    ];
+    $list = $months[$lang] ?? $months['en'];
+
+    if ($lang === 'en') {
+        return "{$list[$m]} {$d}, {$y}";
+    }
+    return "{$d} {$list[$m]} {$y}";
+}

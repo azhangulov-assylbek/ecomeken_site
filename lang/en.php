@@ -11,6 +11,7 @@ return [
         'services' => 'Services',
         'approach' => 'Approach',
         'projects' => 'Projects',
+        'news'     => 'News',
         'contact'  => 'Contact',
         'cta'      => 'Contact us',
     ],
@@ -129,6 +130,16 @@ return [
             'success' => 'Thank you! We\'ll get back to you within one business day.',
             'error'   => 'Something went wrong. Please try again or email us directly at info@ecomeken.kz.',
         ],
+    ],
+
+    'news' => [
+        'section_title'    => 'News',
+        'section_subtitle' => 'On climate tech and sustainability — what we\'re reading and thinking about.',
+        'read_more'        => 'Read more',
+        'back_to_list'     => '← All news',
+        'source_label'     => 'Source',
+        'empty'            => 'No news published yet — check back soon.',
+        'not_found'        => 'That article couldn\'t be found.',
     ],
 
     'footer' => [
