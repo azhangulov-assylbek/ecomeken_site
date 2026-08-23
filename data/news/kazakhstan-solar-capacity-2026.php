@@ -1,0 +1,27 @@
+<?php
+return [
+    'slug' => 'kazakhstan-solar-capacity-2026',
+    'date' => '2026-08-23',
+    'source' => [
+        'label' => 'pv magazine — Kazakhstan\'s solar capacity surpasses 1.37 GW',
+        'url'   => 'https://www.pv-magazine.com/2026/08/03/kazakhstans-solar-capacity-surpasses-1-37-gw/',
+    ],
+
+    'ru' => [
+        'title'   => 'Казахстан преодолел отметку 1,37 ГВт солнечной генерации — и продолжает наращивать мощности',
+        'summary' => 'Установленная мощность солнечных электростанций Казахстана впервые превысила 1,37 ГВт, а доля возобновляемой энергии в энергобалансе страны за шесть лет выросла в несколько раз.',
+        'body'    => "По данным отраслевых изданий, к середине 2026 года установленная мощность солнечной генерации в Казахстане достигла около 1,37 ГВт — это уже 52 солнечные электростанции мощностью свыше 200 кВт по всей стране. За последние шесть лет доля возобновляемых источников в энергобалансе выросла в несколько раз и приблизилась к 7–8%, а сама выработка ВИЭ по итогам 2025 года составила порядка 8,6 млрд кВт·ч.\n\nВ 2026 году в стране планируется ввести пять новых солнечных проектов совокупной мощностью 92,6 МВт — три из них, в Мангистауской, Жетысуской и Костанайской областях, уже запущены. Дальше — больше: заявлены дополнительные 570 МВт новых мощностей, включая станцию на 100 МВт в Алматинской области и три проекта на 70 МВт в Кызылординской. По ряду оценок, страна выполнила собственную цель по доле ВИЭ раньше срока — и теперь на повестке вопрос, какой должна быть следующая планка.\n\nДля нас это не абстрактная статистика. Наш проект Taza Kuat — демонстрационные шоурумы солнечных решений — делает ставку именно на то, что происходит параллельно с гигаваттным строительством утилитных станций: интерес бизнеса и домохозяйств к собственной генерации растёт вместе с национальными показателями, а не отдельно от них. Чем увереннее выглядит энергопереход на уровне страны, тем проще объяснить клиенту, почему солнечная панель на крыше — не эксперимент, а разумное вложение уже сегодня.",
+    ],
+
+    'en' => [
+        'title'   => 'Kazakhstan Passes 1.37 GW of Solar Capacity — and Keeps Building',
+        'summary' => "Kazakhstan's installed solar capacity has topped 1.37 GW for the first time, with the country's renewable energy share several times higher than it was six years ago.",
+        'body'    => "Industry reporting puts Kazakhstan's installed solar generation capacity at roughly 1.37 GW as of mid-2026, spread across 52 operating solar plants larger than 200 kW nationwide. Over the past six years, renewables' share of the country's energy mix has grown several-fold to somewhere around 7-8%, with total renewable output for 2025 landing near 8.6 billion kWh.\n\nFive new solar projects totaling 92.6 MW are planned for 2026, and three are already online — in the Mangystau, Zhetisu, and Kostanay regions. More is coming: announced plans point to another 570 MW of capacity, including a 100 MW plant in the Almaty region and three projects totaling 70 MW in Kyzylorda region. By some accounts, the country hit its own renewables target ahead of schedule — and the conversation has already shifted to what the next target should look like.\n\nNone of this is abstract to us. Our Taza Kuat project — demonstration showrooms for solar solutions — is a bet on exactly what's happening alongside this utility-scale build-out: interest from businesses and households in generating their own power is rising in step with the national numbers, not separately from them. The more solid the country's energy transition looks at scale, the easier it is to make the case to a customer that a rooftop solar panel isn't an experiment — it's a sound investment today.",
+    ],
+
+    'kk' => [
+        'title'   => 'Қазақстан күн энергиясының қуатын 1,37 ГВт-тан асырды — және тоқтамайды',
+        'summary' => 'Қазақстанның орнатылған күн энергиясының қуаты алғаш рет 1,37 ГВт-тан асты, ал жаңартылатын энергия үлесі соңғы алты жылда бірнеше есе өсті.',
+        'body'    => "Салалық басылымдардың мәліметінше, 2026 жылдың ортасына қарай Қазақстанда орнатылған күн энергиясының қуаты шамамен 1,37 ГВт-қа жетті — бұл елдегі қуаты 200 кВт-тан асатын 52 күн электр станциясы дегенді білдіреді. Соңғы алты жылда энергия теңгеріміндегі жаңартылатын көздердің үлесі бірнеше есе өсіп, шамамен 7–8%-ға жетті, ал 2025 жыл қорытындысы бойынша ЖЭК өндірісі шамамен 8,6 млрд кВт·сағ құрады.\n\n2026 жылы жалпы қуаты 92,6 МВт бес жаңа күн жобасын іске қосу жоспарлануда — олардың үшеуі, Маңғыстау, Жетісу және Қостанай облыстарында, қазірдің өзінде іске қосылды. Алда одан да көбі бар: жарияланған жоспарларда тағы 570 МВт жаңа қуат бар, соның ішінде Алматы облысындағы 100 МВт-тық станция және Қызылорда облысындағы жалпы қуаты 70 МВт үш жоба. Кейбір бағалаулар бойынша, ел ЖЭК үлесі бойынша өз мақсатын мерзімінен бұрын орындады — енді келесі межені қандай ету керегі талқыланып жатыр.\n\nБіз үшін бұл дерексіз статистика емес. Біздің Taza Kuat жобамыз — күн энергиясы шешімдерінің демо-шоурумдары — дәл осы утилитарлық ауқымдағы құрылыспен қатар жүріп жатқан нәрсеге ставка жасайды: бизнес пен үй шаруашылықтарының өз энергиясын өндіруге деген қызығушылығы ұлттық көрсеткіштермен бірге өсіп келеді, олардан бөлек емес. Елдің энергия ауысуы неғұрлым сенімді көрінсе, соғұрлым клиентке шатырдағы күн панелі — эксперимент емес, бүгінгі күннің ақылға қонымды инвестициясы екенін түсіндіру оңайырақ болады.",
+    ],
+];
