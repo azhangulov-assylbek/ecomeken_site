@@ -57,6 +57,10 @@ $sent = $_GET['sent'] ?? null; // 'ok' | 'error' | null, set by contact.php afte
             <input type="email" id="email" name="email" required>
           </div>
           <div class="form-field">
+            <label for="phone"><?= e(ecomeken_t($t, 'contact.form.phone')) ?></label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 700 000 0000" pattern="[+0-9\s\-\(\)]{7,20}" required>
+          </div>
+          <div class="form-field">
             <label for="message"><?= e(ecomeken_t($t, 'contact.form.message')) ?></label>
             <textarea id="message" name="message" required></textarea>
           </div>

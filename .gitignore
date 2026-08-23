@@ -4,6 +4,9 @@
 main.py
 pyproject.toml
 
+# Claude Code's own local session state — not part of the site.
+.claude/
+
 # Nested GitHub Desktop clone of this same repo — a separate .git working
 # copy, not part of the site; never let it get committed as a subdirectory.
 /ecomeken_site/

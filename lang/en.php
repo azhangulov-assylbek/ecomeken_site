@@ -125,6 +125,7 @@ return [
         'form' => [
             'name'    => 'Name',
             'email'   => 'Email',
+            'phone'   => 'Phone',
             'message' => 'Message',
             'submit'  => 'Send',
             'success' => 'Thank you! We\'ll get back to you within one business day.',
