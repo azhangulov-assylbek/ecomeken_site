@@ -1,0 +1,18 @@
+Options -Indexes
+RewriteEngine On
+
+# Real files and directories (assets, contact.php itself) pass through untouched.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# /en/, /ru/, /kk/ -> index.php?lang=xx (index.php itself redirects "/" to one of these)
+RewriteRule ^(en|ru|kk)/?$ index.php?lang=$1 [L,QSA]
+
+# Anything else falls back to index.php, which redirects to the detected language.
+RewriteRule ^ index.php [L]
+
+# Basic hardening: no directory listing, hide dotfiles.
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
